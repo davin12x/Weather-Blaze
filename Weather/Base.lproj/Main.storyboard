@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,159 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KITCHENER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfP-2M-DNU">
+                                <rect key="frame" x="216" y="20" width="169" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="3OI-f4-ovN"/>
+                                    <constraint firstAttribute="width" constant="169" id="EYm-I0-5GJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="O6h-Uw-3K5">
+                                <rect key="frame" x="28" y="74" width="550" height="312"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="-80" translatesAutoresizingMaskIntoConstraints="NO" id="A9f-5k-cDt">
+                                        <rect key="frame" x="168" y="0.0" width="214" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun Rise" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SF-zv-hWw">
+                                                <rect key="frame" x="0.0" y="22" width="147" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="6LY-Zd-f44"/>
+                                                    <constraint firstAttribute="width" constant="82" id="REV-AQ-Voz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="DDm-G6-QV3">
+                                                <rect key="frame" x="67" y="0.0" width="147" height="63"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="63" id="NKI-tX-C14"/>
+                                                    <constraint firstAttribute="width" constant="79" id="T6j-v5-VNJ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="5Ou-fL-hX8"/>
+                                            <constraint firstAttribute="width" constant="214" id="XoH-xf-RYt"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hzq-eP-a28">
+                                        <rect key="frame" x="201" y="93" width="148" height="121"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 ˚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiV-kS-PLq">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="121"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="121" id="R6E-O6-sFC"/>
+                                                    <constraint firstAttribute="width" constant="148" id="ksd-4p-TQP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="96"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqI-5W-9nu">
+                                        <rect key="frame" x="152" y="244" width="246" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8g-mi-djX">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="aWF-vk-enh"/>
+                                                    <constraint firstAttribute="width" constant="82" id="e96-kX-Vno"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlP-Gh-QY9">
+                                                <rect key="frame" x="82" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="616-p7-7UQ"/>
+                                                    <constraint firstAttribute="width" constant="82" id="SwU-nC-BY5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-mt-7kY">
+                                                <rect key="frame" x="164" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="82" id="KRJ-dE-FcB"/>
+                                                    <constraint firstAttribute="height" constant="19" id="lMR-gA-OlR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="je7-rT-ZaV">
+                                        <rect key="frame" x="152" y="293" width="246" height="19"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyi-mI-wgr">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="82" id="147-cz-Xp0"/>
+                                                    <constraint firstAttribute="height" constant="19" id="Kpl-Je-u3c"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="76 mph" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTZ-ro-MwJ">
+                                                <rect key="frame" x="82" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="82" id="cV3-WV-nC1"/>
+                                                    <constraint firstAttribute="height" constant="19" id="kxo-E9-tVa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCi-20-gsC">
+                                                <rect key="frame" x="164" y="0.0" width="82" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="19" id="RAN-BG-EAM"/>
+                                                    <constraint firstAttribute="width" constant="82" id="z9V-BI-clk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="je7-rT-ZaV" firstAttribute="centerY" secondItem="O6h-Uw-3K5" secondAttribute="centerY" id="3Fb-4t-gNf"/>
+                                    <constraint firstItem="je7-rT-ZaV" firstAttribute="centerX" secondItem="O6h-Uw-3K5" secondAttribute="centerX" id="BYQ-ze-cfF"/>
+                                    <constraint firstItem="qqI-5W-9nu" firstAttribute="centerX" secondItem="O6h-Uw-3K5" secondAttribute="centerX" id="Flo-1h-hud"/>
+                                    <constraint firstItem="Hzq-eP-a28" firstAttribute="centerX" secondItem="O6h-Uw-3K5" secondAttribute="centerX" id="Tmd-XC-vjZ"/>
+                                    <constraint firstItem="qqI-5W-9nu" firstAttribute="centerY" secondItem="O6h-Uw-3K5" secondAttribute="centerY" id="bfH-e4-AQv"/>
+                                    <constraint firstItem="A9f-5k-cDt" firstAttribute="top" secondItem="O6h-Uw-3K5" secondAttribute="top" id="gbI-E1-ygr"/>
+                                    <constraint firstItem="Hzq-eP-a28" firstAttribute="top" secondItem="A9f-5k-cDt" secondAttribute="bottom" constant="70" id="tpR-A5-M06"/>
+                                    <constraint firstItem="A9f-5k-cDt" firstAttribute="top" secondItem="O6h-Uw-3K5" secondAttribute="top" id="x3W-gh-HdN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZfP-2M-DNU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SmF-Dr-1dg"/>
+                            <constraint firstItem="O6h-Uw-3K5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="WSM-B0-z5c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6h-Uw-3K5" secondAttribute="trailing" constant="5" id="czE-cZ-YfP"/>
+                            <constraint firstItem="ZfP-2M-DNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kB3-yR-hGQ"/>
+                            <constraint firstItem="O6h-Uw-3K5" firstAttribute="top" secondItem="ZfP-2M-DNU" secondAttribute="bottom" constant="17" id="yNl-XI-b6t"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="200" height="200"/>
+    </resources>
 </document>
